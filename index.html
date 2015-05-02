@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+
+        <style>
+
+            body
+            {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+        </style>
+
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="glutils.js"></script>
+
+        <script id="2d-vertex-shader" type="x-shader/x-vertex">
+
+            attribute vec2 a_position;
+            uniform mat3 u_matrix;
+
+            void main(void)
+            {
+                //gl_Position = vec4(a_position, 0, 1);
+                gl_Position = vec4((u_matrix * vec3(a_position, 1)).xy, 0, 1);
+            }
+
+        </script>
+
+        <script id="2d-fragment-shader" type="x-shader/x-fragment">
+
+            precision mediump float;
+            uniform vec4 u_color;
+
+            void main(void)
+            {
+                gl_FragColor = u_color;
+            }
+
+        </script>
+
+    </head>
+    <body onload='main()'>
+        <canvas id='your_canvas'></canvas>
+    </body>
+</html>
