@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Box2d</title>
+
+        <style>
+
+            body
+            {
+                background-color: #D0D0D0;
+            }
+
+            #canvas
+            {
+                background-color: #FFFFFF;
+                position: absolute;
+            }
+
+            #debug
+            {
+                position: absolute;
+            }
+
+        </style>
+    </head>
+
+    <body onload="init()">
+        <canvas id="canvas" width="1500" height="600"></canvas>
+        <canvas id="debug" width="1500" height="600"></canvas>
+
+        <script src="https://code.createjs.com/createjs-2014.12.12.min.js"></script>
+        <script src="libs/box2dweb-2.1.a.3.min.js"></script>
+        <script src="main.js"></script>
+
+        <script src="objects/ball_object.js"></script>
+        <script src="objects/polygon_object.js"></script>
+        <script src="objects/rectangle_object.js"></script>
+
+        <script src="shapes/circle_shape.js"></script>
+        <script src="shapes/polygon_shape.js"></script>
+        <script src="shapes/rectangle_shape.js"></script>
+
+        <script src="bodies/circle_body.js"></script>
+        <script src="bodies/polygon_body.js"></script>
+        <script src="bodies/rectangle_body.js"></script>
+
+        <script src="input.js"></script>
+    </body>
+</html>
